@@ -1,0 +1,18 @@
+{
+  "stt_provider": "deepgram",
+  "stt_model": "nova-3",
+  "stt_language": "multi",
+  "llm_provider": "lamapbx",
+  "llm_base_url": "https://api.dify.ai/v1",
+  "llm_api_key": "app-URvw3WP41SrsNoNkLLITJjSr",
+  "llm_user": "koumton1@gmail.com",
+  "llm_use_blocking_mode": true,
+  "tts_provider": "elevenlabs",
+  "tts_model": "JBFqnCBsd6RMkjVDRZzb",
+  "tts_language": "en",
+  "vad_provider": "silero",
+  "use_noise_cancellation": true,
+  "worker_mode": "dev",
+  "room_name": "default-room",
+  "tts_elevenlabs_model": "eleven_multilingual_v2"
+}

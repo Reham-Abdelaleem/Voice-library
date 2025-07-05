@@ -1,0 +1,92 @@
+[
+  {
+    "id": "bf0a246a-8642-498a-9950-80c35e9276b5",
+    "mode": "similarity",
+    "name": "Sophie",
+    "description": "a calm, mature female voice, perfect for natural conversations",
+    "created_at": "2025-03-04T23:21:59.352339Z",
+    "gender": "feminine",
+    "language": "en"
+  },
+  {
+    "id": "78ab82d5-25be-4f7d-82b3-7ad64e5b85b2",
+    "mode": "similarity",
+    "name": "Savannah",
+    "description": "a smooth, warm mature female voice with slight Southern accent, perfect for all conversational use cases",
+    "created_at": "2025-03-28T16:52:05.136774Z",
+    "gender": "feminine",
+    "language": "en"
+  },
+  {
+    "id": "a8a1eb38-5f15-4c1d-8722-7ac0f329727d",
+    "mode": "similarity",
+    "name": "Calm French Woman",
+    "description": "This voice is soft and calm, suited for soothing conversations in French",
+    "created_at": "1970-03-11T00:00:00Z",
+    "gender": "feminine",
+    "language": "fr"
+  },
+  {
+    "id": "c99d36f3-5ffd-4253-803a-535c1bc9c306",
+    "mode": "similarity",
+    "name": "Griffin",
+    "description": "an authoritative, elderly voice, perfect for narrations",
+    "created_at": "1970-04-29T04:00:25Z",
+    "gender": "masculine",
+    "language": "en"
+  },
+  {
+    "id": "79743797-2087-422f-8dc7-86f9efca85f1",
+    "mode": "similarity",
+    "name": "Mateo",
+    "description": "Mateo is a confident and engaging Spanish voice, perfect for conversational AI and phone interactions. His tone is warm, clear, and naturally expressive, ensuring smooth and natural conversations. ",
+    "created_at": "1970-04-26T00:00:20Z",
+    "gender": "masculine",
+    "language": "es"
+  },
+  {
+    "id": "4df027cb-2920-4a1f-8c34-f21529d5c3fe",
+    "mode": "similarity",
+    "name": "Carson",
+    "description": "a firm adult male voice, perfect for conversational support and providing instructions",
+    "created_at": "2025-05-05T21:45:49.21907Z",
+    "gender": "masculine",
+    "language": "en"
+  },
+  {
+    "id": "00967b2f-88a6-4a31-8153-110a92134b9f",
+    "mode": "similarity",
+    "name": "Ethan",
+    "description": "an expressive adult American male voice, perfect for audiobooks and clear communication",
+    "created_at": "1970-04-18T00:04:00Z",
+    "gender": "masculine",
+    "language": "en"
+  },
+  {
+    "id": "5c43e078-5ba4-4e1f-9639-8d85a403f76a",
+    "mode": "similarity",
+    "name": "Carson Scared",
+    "description": "Scared Version of Carson. Speaking in an American accent.",
+    "created_at": "2025-05-05T22:39:18.587556Z",
+    "gender": "masculine",
+    "language": "en"
+  },
+  {
+    "id": "3246e36c-ac8c-418d-83cd-4eaad5a3b887",
+    "mode": "similarity",
+    "name": "Carson Sad",
+    "description": "Sad Version of Carson. Speaking in an American accent.",
+    "created_at": "2025-05-05T22:28:02.551649Z",
+    "gender": "masculine",
+    "language": "en"
+  },
+  {
+    "id": "0b32066b-2bcc-44b9-89ab-0223a09d1606",
+    "mode": "similarity",
+    "name": "Angry Carson",
+    "description": "Angry Version of Carson. Speaking in an American accent.",
+    "created_at": "2025-05-05T22:24:05.697087Z",
+    "gender": "masculine",
+    "language": "en"
+  }
+]

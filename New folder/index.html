@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Voice Library - AI Voice Management Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'><text y=\'.9em\' font-size=\'90\'>🎤</text></svg>">
+</head>
+<body>
+    <div class="app">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-microphone"></i>
+                    <span>Voice Library</span>
+                </div>
+            </div>
+            <div class="sidebar-menu">
+                <a href="#" class="menu-item active" data-section="dashboard">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Voice Library Dashboard</span>
+                </a>
+                <a href="#" class="menu-item" data-section="voices">
+                    <i class="fas fa-volume-up"></i>
+                    <span>Voice Library</span>
+                </a>
+                <a href="#" class="menu-item" data-section="config">
+                    <i class="fas fa-cog"></i>
+                    <span>Configuration</span>
+                </a>
+                <a href="#" class="menu-item" data-section="worker">
+                    <i class="fas fa-server"></i>
+                    <span>Worker Management</span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <h1 id="page-title">Voice Library Dashboard</h1>
+                    <p id="page-subtitle">Monitor your voice agent status and configuration</p>
+                </div>
+                <div class="header-right">
+                    <div class="status-indicator" id="worker-status">
+                        <div class="status-dot"></div>
+                        <span>Loading...</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Section -->
+            <section id="dashboard-section" class="content-section active">
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Worker Status</h3>
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="card-content status-card">
+                            <div class="status-indicator large" id="worker-status-display">
+                                <div class="status-dot"></div>
+                                <span>Loading...</span>
+                            </div>
+                            <div class="status-details" id="worker-details">
+                                <p><strong>PID:</strong> <span id="worker-pid">-</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Current Configuration</h3>
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <div class="card-content config-overview">
+                            <div class="config-item">
+                                <span class="label">TTS Provider:</span>
+                                <span class="value" id="current-tts-provider">-</span>
+                            </div>
+                            <div class="config-item">
+                                <span class="label">TTS Model:</span>
+                                <span class="value" id="current-tts-model">-</span>
+                            </div>
+                            <div class="config-item">
+                                <span class="label">STT Provider:</span>
+                                <span class="value" id="current-stt-provider">-</span>
+                            </div>
+                            <div class="config-item">
+                                <span class="label">LLM Provider:</span>
+                                <span class="value" id="current-llm-provider">-</span>
+                            </div>
+                            <div class="config-item">
+                                <span class="label">Worker Mode:</span>
+                                <span class="value" id="current-worker-mode">-</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Quick Actions</h3>
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="card-content quick-actions">
+                            <button class="btn btn-primary btn-large" id="start-worker-btn">
+                                <i class="fas fa-play"></i>
+                                Start Worker
+                            </button>
+                            <button class="btn btn-danger btn-large" id="stop-worker-btn">
+                                <i class="fas fa-stop"></i>
+                                Stop Worker
+                            </button>
+                            <button class="btn btn-secondary btn-large" id="refresh-status-btn">
+                                <i class="fas fa-sync-alt"></i>
+                                Refresh Status
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Voice Library Section -->
+            <section id="voices-section" class="content-section">
+                <div class="provider-tabs">
+                    <button class="tab-btn active" data-provider="elevenlabs">
+                        <i class="fas fa-microphone"></i>
+                        ElevenLabs
+                    </button>
+                    <button class="tab-btn" data-provider="deepgram">
+                        <i class="fas fa-headphones"></i>
+                        Deepgram
+                    </button>
+                    <button class="tab-btn" data-provider="cartesia">
+                        <i class="fas fa-volume-up"></i>
+                        Cartesia
+                    </button>
+                </div>
+
+                <!-- ElevenLabs Voices -->
+                <div id="elevenlabs-voices" class="provider-content active">
+                    <div class="voices-grid" id="elevenlabs-voices-grid">
+                    </div>
+                </div>
+
+                <!-- Deepgram Voices -->
+                <div id="deepgram-voices" class="provider-content">
+                    <div class="voices-grid" id="deepgram-voices-grid">
+                    </div>
+                </div>
+
+                <!-- Cartesia Voices -->
+                <div id="cartesia-voices" class="provider-content">
+                    <div class="voices-grid" id="cartesia-voices-grid">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Configuration Section -->
+            <section id="config-section" class="content-section active">
+                <div class="config-tabs">
+                    <button class="tab-btn active" data-config="tts">
+                        <i class="fas fa-microphone"></i>
+                        Text-to-Speech
+                    </button>
+                    <button class="tab-btn" data-config="stt">
+                        <i class="fas fa-headphones"></i>
+                        Speech-to-Text
+                    </button>
+                    <button class="tab-btn" data-config="llm">
+                        <i class="fas fa-brain"></i>
+                        Language Model
+                    </button>
+                    <button class="tab-btn" data-config="worker">
+                        <i class="fas fa-server"></i>
+                        Worker Settings
+                    </button>
+                    <button class="tab-btn" data-config="update-all">
+                        <i class="fas fa-sync"></i>
+                        Update All
+                    </button>
+                </div>
+
+                <!-- TTS Configuration -->
+                <div id="tts-config" class="config-panel active">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Text-to-Speech Configuration</h3>
+                        </div>
+                        <div class="card-content">
+                            <form id="tts-form">
+                                <div class="form-group">
+                                    <label for="tts-provider">Provider</label>
+                                    <select id="tts-provider" name="provider" required>
+                                        <option value="elevenlabs">ElevenLabs</option>
+                                        <option value="deepgram">Deepgram</option>
+                                        <option value="cartesia">Cartesia</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tts-model">Voice/Model</label>
+                                    <input type="text" id="tts-model" name="model" placeholder="Voice ID or Model Name" required>
+                                </div>
+                                <div class="form-group" id="elevenlabs-model-group">
+                                    <label for="elevenlabs-model">ElevenLabs Model</label>
+                                    <select id="elevenlabs-model" name="elevenlabs_model">
+                                        <option value="eleven_multilingual_v2">Eleven Multilingual V2</option>
+                                        <option value="eleven_english_v1">Eleven English V1</option>
+                                        <option value="eleven_turbo_v2">Eleven Turbo V2</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tts-language">Language</label>
+                                    <input type="text" id="tts-language" name="language" placeholder="e.g., en, es, fr">
+                                </div>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-save"></i>
+                                    Update TTS Configuration
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STT Configuration -->
+                <div id="stt-config" class="config-panel">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Speech-to-Text Configuration</h3>
+                        </div>
+                        <div class="card-content">
+                            <form id="stt-form">
+                                <div class="form-group">
+                                    <label for="stt-provider">Provider</label>
+                                    <select id="stt-provider" name="provider" required>
+                                        <option value="deepgram">Deepgram</option>
+                                        <option value="groq">Groq</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="stt-model">Model</label>
+                                    <input type="text" id="stt-model" name="model" placeholder="Model Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="stt-language">Language</label>
+                                    <input type="text" id="stt-language" name="language" placeholder="e.g., en, es, fr">
+                                </div>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-save"></i>
+                                    Update STT Configuration
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LLM Configuration -->
+                <div id="llm-config" class="config-panel">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Language Model Configuration</h3>
+                        </div>
+                        <div class="card-content">
+                            <form id="llm-form">
+                                <div class="form-group">
+                                    <label for="llm-provider">Provider</label>
+                                    <select id="llm-provider" name="provider" required>
+                                        <option value="groq">Groq</option>
+                                        <option value="openai">OpenAI</option>
+                                        <option value="lamapbx">LamaPBX</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-save"></i>
+                                    Update LLM Configuration
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Worker Configuration -->
+                <div id="worker-config" class="config-panel">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Worker Settings</h3>
+                        </div>
+                        <div class="card-content">
+                            <form id="worker-form">
+                                <div class="form-group">
+                                    <label for="worker-mode">Worker Mode</label>
+                                    <select id="worker-mode" name="mode" required>
+                                        <option value="dev">Development</option>
+                                        <option value="prod">Production</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="room-name">Room Name</label>
+                                    <input type="text" id="room-name" name="room_name" placeholder="Room Name">
+                                </div>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-save"></i>
+                                    Update Worker Configuration
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Update All Configuration -->
+                <div id="update-all-config" class="config-panel">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Update All Configuration</h3>
+                            <p class="card-description">Update LLM and TTS settings in a single request</p>
+                        </div>
+                        <div class="card-content">
+                            <form id="update-all-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="update-all-llm-provider">LLM Provider</label>
+                                        <select id="update-all-llm-provider" name="llm-provider" required>
+                                            <option value="groq">Groq</option>
+                                            <option value="openai">OpenAI</option>
+                                            <option value="lamapbx">LamaPBX</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="update-all-llm-api-key">LLM API Key</label>
+                                        <input type="password" id="update-all-llm-api-key" name="llm-api-key" placeholder="API Key" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="update-all-tts-provider">TTS Provider</label>
+                                        <select id="update-all-tts-provider" name="tts-provider" required>
+                                            <option value="elevenlabs">ElevenLabs</option>
+                                            <option value="deepgram">Deepgram</option>
+                                            <option value="cartesia">Cartesia</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="update-all-tts-model">TTS Model/Voice ID</label>
+                                        <input type="text" id="update-all-tts-model" name="tts-model" placeholder="Voice ID or Model Name" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="update-all-tts-language">Language</label>
+                                    <input type="text" id="update-all-tts-language" name="tts-language" placeholder="e.g., en, es, fr" value="en">
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-large">
+                                    <i class="fas fa-sync"></i>
+                                    Update All Configuration
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Worker Management Section -->
+            <section id="worker-section" class="content-section">
+                <div class="worker-container">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Worker Management</h3>
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="card-content">
+                            <div class="worker-status-display">
+                                <div class="status-indicator large" id="worker-management-status">
+                                    <div class="status-dot"></div>
+                                    <span>Loading...</span>
+                                </div>
+                                <div class="worker-info" id="worker-management-info">
+                                    <p><strong>PID:</strong> <span id="worker-management-pid">-</span></p>
+                                    <p><strong>Mode:</strong> <span id="worker-management-mode">-</span></p>
+                                    <p><strong>Room:</strong> <span id="worker-management-room">-</span></p>
+                                </div>
+                            </div>
+                            <div class="worker-actions">
+                                <button class="btn btn-primary btn-large" id="start-worker-management-btn">
+                                    <i class="fas fa-play"></i>
+                                    Start Worker
+                                </button>
+                                <button class="btn btn-danger btn-large" id="stop-worker-management-btn">
+                                    <i class="fas fa-stop"></i>
+                                    Stop Worker
+                                </button>
+                                <button class="btn btn-secondary btn-large" id="refresh-worker-management-btn">
+                                    <i class="fas fa-sync-alt"></i>
+                                    Refresh Status
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Voice Sample Modal -->
+    <div class="modal-overlay" id="voice-sample-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 id="modal-voice-name">Voice Sample</h3>
+                <button class="modal-close" id="modal-close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content">
+                <div class="voice-sample-player">
+                    <div class="sample-info">
+                        <p><strong>Voice ID:</strong> <span id="modal-voice-id">-</span></p>
+                        <p><strong>Provider:</strong> <span id="modal-voice-provider">-</span></p>
+                    </div>
+                    
+                    <div class="sample-input">
+                        <label for="sample-text-input">Sample Text:</label>
+                        <textarea id="sample-text-input" placeholder="Enter text to generate voice sample..." rows="3">Hello, this is a sample of my voice.</textarea>
+                        <div class="generate-sample-container">
+                            <button id="generate-sample-btn" class="btn btn-primary">
+                                <i class="fas fa-microphone"></i>
+                                Generate Sample
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="audio-player">
+                        <audio id="voice-sample-audio" controls>
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                    
+                    <div class="sample-actions">
+                        <button id="download-sample-btn" class="btn btn-primary" disabled>
+                            <i class="fas fa-download"></i>
+                            Download Sample
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script_updated.js"></script>
+</body>
+</html>
+
+

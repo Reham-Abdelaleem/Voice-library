@@ -1,0 +1,365 @@
+[
+  {
+    "id": "9BWtsMINqrJLrRacOk9x",
+    "mode": "similarity",
+    "name": "Aria",
+    "description": "Female, middle-aged, American, expressive, for social media.",
+    "created_at": "2025-03-04T23:21:59.352339Z",
+    "gender": "feminine",
+    "language": "en-us",
+    "model_names": [
+      "eleven_v2_flash",
+      "eleven_flash_v2",
+      "eleven_turbo_v2_5",
+      "eleven_multilingual_v2",
+      "eleven_v2_5_flash",
+      "eleven_flash_v2_5",
+      "eleven_turbo_v2"
+    ]
+  },
+  {
+    "id": "CwhRBWXzGAHq8TQ4Fs17",
+    "mode": "similarity",
+    "name": "Roger",
+    "description": "Male, middle-aged, American, confident, for social media. Also multilingual.",
+    "created_at": "2025-03-04T23:21:59.352339Z",
+    "gender": "masculine",
+    "language": "en-us",
+    "model_names": [
+      "eleven_v2_flash",
+      "eleven_flash_v2",
+      "eleven_turbo_v2_5",
+      "eleven_multilingual_v2",
+      "eleven_v2_5_flash",
+      "eleven_flash_v2_5",
+      "eleven_turbo_v2"
+    ]
+  },
+  {
+    "id": "EXAVITQu4vr4xnSDxMaL",
+    "mode": "similarity",
+    "name": "Sarah",
+    "description": "Female, young, American, soft news voice, for news.",
+    "created_at": "2025-03-04T23:21:59.352339Z",
+    "gender": "feminine",
+    "language": "en-us",
+    "model_names": [
+      "eleven_turbo_v2",
+      "eleven_multilingual_v2",
+      "eleven_turbo_v2_5"
+    ]
+  },
+  {
+    "id": "FGY2WhTYpPnrIDTdsKH5",
+    "mode": "similarity",
+    "name": "Laura",
+    "description": "Female, young, American, upbeat, for social media.",
+    "created_at": "2025-03-04T23:21:59.352339Z",
+    "gender": "feminine",
+    "language": "en-us",
+    "model_names": [
+      "eleven_v2_flash",
+      "eleven_flash_v2",
+      "eleven_turbo_v2_5",
+      "eleven_multilingual_v2",
+      "eleven_v2_5_flash",
+      "eleven_flash_v2_5",
+      "eleven_turbo_v2"
+    ]
+  },
+  {
+    "id": "IKne3meq5aSn9XLyUdCD",
+    "mode": "similarity",
+    "name": "Charlie",
+    "description": "Male, middle-aged, Australian, natural and casual, for conversational content.",
+    "created_at": "2025-03-04T23:21:59.352339Z",
+    "gender": "masculine",
+    "language": "en-au",
+    "model_names": [
+      "eleven_v2_flash",
+      "eleven_flash_v2",
+      "eleven_turbo_v2_5",
+      "eleven_multilingual_v2",
+      "eleven_multilingual_v1",
+      "eleven_v2_5_flash",
+      "eleven_flash_v2_5",
+      "eleven_turbo_v2"
+    ]
+  },
+  {
+    "id": "JBFqnCBsd6RMkjVDRZzb",
+    "mode": "similarity",
+    "name": "George",
+    "description": "Male, middle-aged, British, warm, for narration.",
+    "created_at": "2025-03-04T23:21:59.352339Z",
+    "gender": "masculine",
+    "language": "en-gb",
+    "model_names": [
+      "eleven_v2_flash",
+      "eleven_flash_v2",
+      "eleven_turbo_v2_5",
+      "eleven_multilingual_v2",
+      "eleven_v2_5_flash",
+      "eleven_flash_v2_5",
+      "eleven_turbo_v2"
+    ]
+  },
+  {
+    "id": "N2lVS1w4EtoT3dr4eOWO",
+    "mode": "similarity",
+    "name": "Callum",
+    "description": "Male, middle-aged, Transatlantic, intense, for characters.",
+    "created_at": "2025-03-04T23:21:59.352339Z",
+    "gender": "masculine",
+    "language": "en",
+    "model_names": [
+      "eleven_v2_flash",
+      "eleven_flash_v2",
+      "eleven_turbo_v2_5",
+      "eleven_multilingual_v2",
+      "eleven_multilingual_v1",
+      "eleven_v2_5_flash",
+      "eleven_flash_v2_5",
+      "eleven_turbo_v2"
+    ]
+  },
+  {
+    "id": "SAz9YHcvj6GT2YYXdXww",
+    "mode": "similarity",
+    "name": "River",
+    "description": "A versatile voice with no specific characteristics found.",
+    "created_at": "2025-03-04T23:21:59.352339Z",
+    "gender": "unknown",
+    "language": "en",
+    "model_names": [
+      "eleven_v2_flash",
+      "eleven_flash_v2",
+      "eleven_turbo_v2_5",
+      "eleven_multilingual_sts_v2",
+      "eleven_multilingual_v2",
+      "eleven_v2_5_flash",
+      "eleven_flash_v2_5",
+      "eleven_turbo_v2"
+    ]
+  },
+  {
+    "id": "TX3LPaxmHKxFdv7VOQHJ",
+    "mode": "similarity",
+    "name": "Liam",
+    "description": "Male, young, American, articulate, for narration.",
+    "created_at": "2025-03-04T23:21:59.352339Z",
+    "gender": "masculine",
+    "language": "en-us",
+    "model_names": [
+      "eleven_v2_flash",
+      "eleven_flash_v2",
+      "eleven_turbo_v2_5",
+      "eleven_multilingual_v2",
+      "eleven_multilingual_v1",
+      "eleven_v2_5_flash",
+      "eleven_flash_v2_5",
+      "eleven_turbo_v2"
+    ]
+  },
+  {
+    "id": "XB0fDUnXU5powFXDhCwa",
+    "mode": "similarity",
+    "name": "Charlotte",
+    "description": "Female, young, English-Swedish, seductive, for characters.",
+    "created_at": "2025-03-04T23:21:59.352339Z",
+    "gender": "feminine",
+    "language": "en",
+    "model_names": [
+      "eleven_v2_flash",
+      "eleven_flash_v2",
+      "eleven_turbo_v2_5",
+      "eleven_multilingual_v2",
+      "eleven_multilingual_v1",
+      "eleven_v2_5_flash",
+      "eleven_flash_v2_5",
+      "eleven_turbo_v2"
+    ]
+  },
+  {
+    "id": "Xb7hH8MSUJpSbSDYk0k2",
+    "mode": "similarity",
+    "name": "Alice",
+    "description": "Female, middle-aged, British, confident, for news.",
+    "created_at": "2025-03-04T23:21:59.352339Z",
+    "gender": "feminine",
+    "language": "en-gb",
+    "model_names": [
+      "eleven_v2_flash",
+      "eleven_flash_v2",
+      "eleven_turbo_v2_5",
+      "eleven_multilingual_v2",
+      "eleven_v2_5_flash",
+      "eleven_flash_v2_5",
+      "eleven_turbo_v2"
+    ]
+  },
+  {
+    "id": "XrExE9yKIg1WjnnlVkGX",
+    "mode": "similarity",
+    "name": "Matilda",
+    "description": "Female, middle-aged, American, friendly, for narration.",
+    "created_at": "2025-03-04T23:21:59.352339Z",
+    "gender": "feminine",
+    "language": "en-us",
+    "model_names": [
+      "eleven_v2_flash",
+      "eleven_flash_v2",
+      "eleven_turbo_v2_5",
+      "eleven_multilingual_v2",
+      "eleven_v2_5_flash",
+      "eleven_flash_v2_5",
+      "eleven_turbo_v2"
+    ]
+  },
+  {
+    "id": "bIHbv24MWmeRgasZH58o",
+    "mode": "similarity",
+    "name": "Will",
+    "description": "Female, young, American, friendly, for social content.",
+    "created_at": "2025-03-04T23:21:59.352339Z",
+    "gender": "feminine",
+    "language": "en-us",
+    "model_names": [
+      "eleven_v2_flash",
+      "eleven_flash_v2",
+      "eleven_turbo_v2_5",
+      "eleven_multilingual_v2",
+      "eleven_v2_5_flash",
+      "eleven_flash_v2_5",
+      "eleven_turbo_v2"
+    ]
+  },
+  {
+    "id": "cgSgspJ2msm6clMCkdW9",
+    "mode": "similarity",
+    "name": "Jessica",
+    "description": "Female, young, American, expressive, for conversational content.",
+    "created_at": "2025-03-04T23:21:59.352339Z",
+    "gender": "feminine",
+    "language": "en-us",
+    "model_names": [
+      "eleven_v2_flash",
+      "eleven_flash_v2",
+      "eleven_turbo_v2_5",
+      "eleven_multilingual_v2",
+      "eleven_v2_5_flash",
+      "eleven_flash_v2_5",
+      "eleven_turbo_v2"
+    ]
+  },
+  {
+    "id": "cjVigY5qzO86Huf0OWal",
+    "mode": "similarity",
+    "name": "Eric",
+    "description": "Male, middle-aged, American, friendly, for conversational content.",
+    "created_at": "2025-03-04T23:21:59.352339Z",
+    "gender": "masculine",
+    "language": "en-us",
+    "model_names": [
+      "eleven_v2_flash",
+      "eleven_flash_v2",
+      "eleven_turbo_v2_5",
+      "eleven_multilingual_v2",
+      "eleven_v2_5_flash",
+      "eleven_flash_v2_5",
+      "eleven_turbo_v2"
+    ]
+  },
+  {
+    "id": "iP95p4xoKVk53GoZ742B",
+    "mode": "similarity",
+    "name": "Chris",
+    "description": "Male, middle-aged, American, casual, for conversational content.",
+    "created_at": "2025-03-04T23:21:59.352339Z",
+    "gender": "masculine",
+    "language": "en-us",
+    "model_names": [
+      "eleven_v2_flash",
+      "eleven_flash_v2",
+      "eleven_turbo_v2_5",
+      "eleven_multilingual_v2",
+      "eleven_v2_5_flash",
+      "eleven_flash_v2_5",
+      "eleven_turbo_v2"
+    ]
+  },
+  {
+    "id": "nPczCjzI2devNBz1zQrb",
+    "mode": "similarity",
+    "name": "Brian",
+    "description": "Male, middle-aged, American, deep, for narration.",
+    "created_at": "2025-03-04T23:21:59.352339Z",
+    "gender": "masculine",
+    "language": "en-us",
+    "model_names": [
+      "eleven_v2_flash",
+      "eleven_flash_v2",
+      "eleven_turbo_v2_5",
+      "eleven_multilingual_v2",
+      "eleven_v2_5_flash",
+      "eleven_flash_v2_5",
+      "eleven_turbo_v2"
+    ]
+  },
+  {
+    "id": "onwK4e9ZLuTAKqWW03F9",
+    "mode": "similarity",
+    "name": "Daniel",
+    "description": "Male, middle-aged, British, authoritative, for news.",
+    "created_at": "2025-03-04T23:21:59.352339Z",
+    "gender": "masculine",
+    "language": "en-gb",
+    "model_names": [
+      "eleven_v2_flash",
+      "eleven_flash_v2",
+      "eleven_turbo_v2_5",
+      "eleven_multilingual_v2",
+      "eleven_multilingual_v1",
+      "eleven_v2_5_flash",
+      "eleven_flash_v2_5",
+      "eleven_turbo_v2"
+    ]
+  },
+  {
+    "id": "pFZP5JQG7iQjIQuC4Bku",
+    "mode": "similarity",
+    "name": "Lily",
+    "description": "A versatile voice with no specific characteristics found.",
+    "created_at": "2025-03-04T23:21:59.352339Z",
+    "gender": "unknown",
+    "language": "en",
+    "model_names": [
+      "eleven_v2_flash",
+      "eleven_flash_v2",
+      "eleven_turbo_v2_5",
+      "eleven_multilingual_sts_v2",
+      "eleven_multilingual_v2",
+      "eleven_v2_5_flash",
+      "eleven_flash_v2_5",
+      "eleven_turbo_v2"
+    ]
+  },
+  {
+    "id": "pqHfZKP75CvOlQylNhV4",
+    "mode": "similarity",
+    "name": "Bill",
+    "description": "Male, old, American, trustworthy, for narration.",
+    "created_at": "2025-03-04T23:21:59.352339Z",
+    "gender": "masculine",
+    "language": "en-us",
+    "model_names": [
+      "eleven_v2_flash",
+      "eleven_flash_v2",
+      "eleven_turbo_v2_5",
+      "eleven_multilingual_v2",
+      "eleven_v2_5_flash",
+      "eleven_flash_v2_5",
+      "eleven_turbo_v2"
+    ]
+  }
+]

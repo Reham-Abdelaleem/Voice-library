@@ -1,0 +1,110 @@
+[
+  {
+    "id": "aura-asteria-en",
+    "mode": "similarity",
+    "name": "asteria",
+    "description": "Clear, Confident, Knowledgeable, Energetic, for Advertising",
+    "created_at": "2025-03-04T23:21:59.352339Z",
+    "gender": "feminine",
+    "language": "en"
+  },
+  {
+    "id": "aura-luna-en",
+    "mode": "similarity",
+    "name": "luna",
+    "description": "Friendly, Natural, Engaging, for IVR",
+    "created_at": "2025-03-04T23:21:59.352339Z",
+    "gender": "feminine",
+    "language": "en"
+  },
+  {
+    "id": "aura-stella-en",
+    "mode": "similarity",
+    "name": "stella",
+    "description": "Clear, Professional, Engaging, for Customer service",
+    "created_at": "2025-03-04T23:21:59.352339Z",
+    "gender": "feminine",
+    "language": "en"
+  },
+  {
+    "id": "aura-athena-en",
+    "mode": "similarity",
+    "name": "athena",
+    "description": "Calm, Smooth, Professional, for Storytelling",
+    "created_at": "2025-03-04T23:21:59.352339Z",
+    "gender": "feminine",
+    "language": "en"
+  },
+  {
+    "id": "aura-hera-en",
+    "mode": "similarity",
+    "name": "hera",
+    "description": "Smooth, Warm, Professional, for Informative",
+    "created_at": "2025-03-04T23:21:59.352339Z",
+    "gender": "feminine",
+    "language": "en"
+  },
+  {
+    "id": "aura-orion-en",
+    "mode": "similarity",
+    "name": "orion",
+    "description": "Approachable, Comfortable, Calm, Polite, for Informative",
+    "created_at": "2025-03-04T23:21:59.352339Z",
+    "gender": "masculine",
+    "language": "en"
+  },
+  {
+    "id": "aura-arcas-en",
+    "mode": "similarity",
+    "name": "arcas",
+    "description": "Natural, Smooth, Clear, Comfortable, for Customer service, casual chat",
+    "created_at": "2025-03-04T23:21:59.352339Z",
+    "gender": "masculine",
+    "language": "en"
+  },
+  {
+    "id": "aura-perseus-en",
+    "mode": "similarity",
+    "name": "perseus",
+    "description": "Confident, Professional, Clear, for Customer service",
+    "created_at": "2025-03-04T23:21:59.352339Z",
+    "gender": "masculine",
+    "language": "en"
+  },
+  {
+    "id": "aura-angus-en",
+    "mode": "similarity",
+    "name": "angus",
+    "description": "Warm, Friendly, Natural, for Storytelling",
+    "created_at": "2025-03-04T23:21:59.352339Z",
+    "gender": "masculine",
+    "language": "en"
+  },
+  {
+    "id": "aura-orpheus-en",
+    "mode": "similarity",
+    "name": "orpheus",
+    "description": "Professional, Clear, Confident, Trustworthy, for Customer service, storytelling",
+    "created_at": "2025-03-04T23:21:59.352339Z",
+    "gender": "masculine",
+    "language": "en"
+  },
+  {
+    "id": "aura-helios-en",
+    "mode": "similarity",
+    "name": "helios",
+    "description": "Professional, Clear, Confident, for Customer service",
+    "created_at": "2025-03-04T23:21:59.352339Z",
+    "gender": "masculine",
+    "language": "en"
+  },
+  {
+    "id": "aura-zeus-en",
+    "mode": "similarity",
+    "name": "zeus",
+    "description": "Deep, Trustworthy, Smooth, for IVR",
+    "created_at": "2025-03-04T23:21:59.352339Z",
+    "gender": "masculine",
+    "language": "en"
+  }
+]
